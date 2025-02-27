@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat Alternates", serif;
+}
+input {
+    width: 400px;
+    border-bottom: 2px dotted;
+    color: black;
+    outline: none;
+}
+/* days */
+.days {
+    margin-top: 20px;
+}
+/* prayers */
+.prayers {
+    margin-top: 30px;
+}
+.prayers h4 {
+    padding: 10px;
+    position: relative;
+    top: 10px;
+    width: 50%;
+    font-family: "Moon Dance", serif;
+    font-size: 28px;
+    color: maroon;
+    text-align: center;
+}
+h1 {
+    font-family: "Moon Dance", serif;
+    font-size: 42px;
+    color: maroon;
+}
+
+.lists {
+    padding-top: 30px;
+    padding: 20px;
+}
+.list {
+    padding: 8px;
+    margin-top: 8px;
+}
+#changeMode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(97, 83, 83, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#changeMode:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}

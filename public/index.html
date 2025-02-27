@@ -3,7 +3,187 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap"
+            rel="stylesheet"
+        />
+        <title>Ramadan Day Planner</title>
     </head>
-    <body></body>
+    <body>
+        <main>
+            <h1 class="text-center text-3xl">Ramadan Day Planner</h1>
+            <section class="days">
+                <div class="flex gap-10">
+                    <div
+                        class="flex flex-col justify-center items-center bg-white rounded"
+                    >
+                        <label class="text-[#e1b12c]" for="day"
+                            >Ramadan Day</label
+                        >
+                        <input class="bg-white" type="text" />
+                    </div>
+                    <div
+                        class="flex flex-col justify-center items-center bg-white rounded"
+                    >
+                        <label class="text-[#e1b12c]" for="day">Date</label>
+                        <input class="bg-white" type="text" />
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="prayers">
+                <div class="flex gap-10 md:items-center md:justify-between">
+                    <div>
+                        <h4 class="bg-[#fab1a0] w-50 text-center rounded-lg">
+                            Ibadah Checklist
+                        </h4>
+                        <div class="lists bg-white">
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="bg-[#fdcb6e] text-center rounded-lg">
+                            Today's goals <i class="fa-solid fa-bullseye"></i>
+                        </h4>
+                        <div class="lists bg-white">
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div><i class="fa-regular fa-star"></i></div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="prayers">
+                <div class="flex gap-10 items-center justify-between">
+                    <div>
+                        <h4 class="bg-[#fab1a0] w-50 text-center rounded-lg">
+                            Quran Tracker
+                        </h4>
+                        <div class="lists bg-white">
+                            <div class="flex items-center">
+                                <label for="">Surah</label>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <label for="">Verset</label>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="bg-[#fdcb6e] w-50 text-center rounded-lg">
+                            Today I'm grateful for
+                        </h4>
+                        <div class="lists bg-white">
+                            <div class="flex bg-[#FEA47F] rounded list">
+                                <div>
+                                    <i class="fa-solid fa-heart text-white"></i>
+                                </div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex bg-[#FD7272] rounded list">
+                                <div>
+                                    <i class="fa-solid fa-heart text-white"></i>
+                                </div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="flex bg-[#cd6133] rounded list">
+                                <div>
+                                    <i class="fa-solid fa-heart text-white"></i>
+                                </div>
+                                <div>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="prayers">
+                <div class="flex gap-10 items-center justify-between">
+                    <div class="w-1/2">
+                        <h4 class="bg-[#fab1a0] w-50 text-center rounded-lg">
+                            Hydratation Tracker
+                        </h4>
+                        <div class="lists bg-white">
+                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <h4 class="bg-[#fab1a0] text-center rounded-lg">
+                            Today's Mood
+                        </h4>
+                        <div class="lists bg-white">
+                            <div>😢 🤭 😄 🤣 🤯</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="bg-white prayers">
+                <h4 class="text-center">Dua/Verse of the day</h4>
+            </section>
+            <button id="changeMode">
+                <i class="fa fa-sun"></i>
+            </button>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
