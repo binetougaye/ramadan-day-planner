@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e0dede; 
+    font-family: Arial, sans-serif; 
+}
+
+.ramadan-box {
+    position: absolute;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #b4984b; 
+    padding: 15px 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-align: center; 
+}
+
+.ramadan-box h1 {
+    margin: 0;
+    color: white; 
+    font-size: 35px; 
+}
+
+.icon {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 50px; 
+}
+
+.icon2 {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    gap: 50px; 
+}
+
+.icon2-top-left {
+    left: 170px;
+}
+
+.icon-top-left {
+    left: 100px;
+}
+
+.icon-top-right {
+    right: 100px;
+}
+
+.icon2-top-right {
+    right: 170px;
+}
+
+.lune {
+    width: 110px; 
+    height: 110px;
+    animation: float 5s infinite ease-in-out; 
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.05);
+    }
+}
+
+.ramadan-box {
+    animation: pulse 3s infinite ease-in-out; 
+}
+
+/* Media Query pour les écrans mobiles */
+@media only screen and (max-width: 768px) {
+    .ramadan-box {
+        padding: 10px 20px; 
+        border-radius: 15px; 
+    }
+
+    .ramadan-box h1 {
+        font-size: 25px; 
+    }
+
+    .icon, .icon2 {
+        gap: 30px; 
+    }
+
+    .icon-top-left {
+        left: 10px;
+    }
+
+    .icon-top-right {
+        right: 10px;
+    }
+
+    .icon2-top-left {
+        left: 35px;
+    }
+
+    .icon2-top-right {
+        right: 35px;
+    }
+
+    .lune {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .icon2 {
+        top: 80px;
+    }
+}
