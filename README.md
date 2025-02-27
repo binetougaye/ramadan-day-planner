@@ -66,8 +66,6 @@ cd ramadan-day-planner
 
 ## 🎨 Aperçu  
 
-📷 *Ajoute une capture d’écran du projet ici*  
-
 ```md
 ![Aperçu du projet](public/assets/preview.png)
 ```
