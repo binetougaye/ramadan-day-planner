@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "moment-hijri": "^3.0.0"
+  }
+}
