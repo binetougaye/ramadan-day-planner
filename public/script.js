@@ -10,7 +10,7 @@ button.addEventListener("click", () => {
 
     }
 })
-// Recupérer la date du jour
+// Recupérer la date grégorienne du jour
 const date = document.getElementById("date")
 const today = new Date().toLocaleDateString('fr-FR', {
     weekday: 'long',
@@ -23,7 +23,7 @@ date.innerText = today
 
 // Obtenir la date islamique du jour
 const hijriDate = document.getElementById("hijri")
-
+const dateDuJour = document.getElementById("date_du_jour")
 async function getHijriDate() {
     const today = new Date();
     const year = today.getFullYear();
@@ -38,6 +38,7 @@ async function getHijriDate() {
         const year = data?.data.hijri.year
         const weekday = data?.data.hijri.weekday.en
         hijriDate.innerText = weekday + " " + day + " " + month + " " + year
+        dateDuJour.innerText = day
 
     } catch (error) {
         console.log(error);

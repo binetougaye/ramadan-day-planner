@@ -14,7 +14,8 @@ main {
     padding: 20px;
 }
 input,
-#date {
+#date,
+#date_du_jour {
     width: 350px;
     border-bottom: 2px dotted;
     color: black;
