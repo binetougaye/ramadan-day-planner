@@ -210,3 +210,125 @@ h1 {
         top: 80px;
     }
 }
+
+.input-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 40px; 
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    width: 85%;
+    border: none;
+    background-color: #dcbd87;
+    color: white;
+    padding-left: 10px;
+    border-radius: 100px;
+    font-size: 14px;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+.input-container button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-height: 100%; 
+    width: 60px;
+    border-radius: 100px;
+    border: none;
+    background-color: #B8860B;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #2e2c10;
+    }
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: #dcbd87; 
+    border-radius: 10px;
+    padding: 8px 12px; 
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    min-height: 40px;
+}
+
+.task-item.completed {
+    background-color: #3c3c32; 
+    text-decoration: line-through;
+    color: #7a7a7a; 
+}
+
+.text {
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: normal; 
+    word-break: break-word; 
+    &:hover {
+        cursor: pointer;
+    }
+    .task-item.active & {
+        text-decoration: line-through;
+    }
+}
+
+.task-item .btn-check {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    min-height: 30px; 
+    border-radius: 15px;
+    border: none;
+    background-color: #B8860B; 
+    color: #ffffff; 
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 8px;
+}
+
+.task-item .btn-check:hover {
+    background-color: #2e2c10;
+}
+
+.task-item .btn-close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    min-height: 30px; 
+    border-radius: 15px;
+    border: none;
+    background-color: #B8860B; 
+    color: #ffffff; 
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 8px;
+}
+
+.task-item .btn-close:hover {
+    background-color: #2e2c10;
+}
