@@ -7,7 +7,7 @@
 }
 body {
     font-family: "Montserrat Alternates", serif;
-    background-color: #e0dede;
+    background: linear-gradient(to bottom, #f6f1e9, #d6c7ae);
 }
 main {
     margin-top: 150px;
@@ -93,7 +93,7 @@ h1 {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #1b1b2f;
+    background-color: #B8860B;
     padding: 15px 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -102,7 +102,7 @@ h1 {
 
 .ramadan-box h1 {
     margin: 0;
-    color: #ffd700;
+    color: #ffffff;
     font-size: 35px;
 }
 
