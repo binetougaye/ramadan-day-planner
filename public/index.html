@@ -62,17 +62,17 @@
             <section class="days">
                 <div class="flex justify-center gap-10">
                     <div
-                        class="flex flex-col justify-center items-center bg-white rounded"
+                        class="flex flex-col justify-center items-center bg-[#F6F1E9] rounded"
                     >
-                        <label class="text-[#e1b12c]" for="day"
+                        <label class="text-[#B8860B]" for="day"
                             >Ramadan Day</label
                         >
-                        <input class="bg-white" type="text" />
+                        <input class="bg-[#F6F1E9]" type="text" />
                     </div>
                     <div
-                        class="flex flex-col justify-center items-center bg-white rounded"
+                        class="flex flex-col justify-center items-center bg-[#F6F1E9] rounded"
                     >
-                        <label class="text-[#e1b12c]" for="day"
+                        <label class="text-[#B8860B]" for="day"
                             >Date du Jour</label
                         >
                         <p id="date"></p>
@@ -82,13 +82,13 @@
             <!--  -->
             <section class="prayers">
                 <div class="grid grid-cols-3 gap-5">
-                    <div>
+                    <div class="card">
                         <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] w-50 text-center rounded-lg"
+                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
                         >
                             Ibadah Checklist <i class="fa fa-moon"></i>
                         </h4>
-                        <div class="lists card bg-white">
+                        <div class="lists bg-[#F6F1E9]">
                             <div class="flex">
                                 <div>
                                     <input type="text" />
@@ -108,11 +108,11 @@
                     </div>
                     <div class="card">
                         <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] text-center rounded-lg"
+                            class="bg-[#B8860B] text-[#ffffff] text-center rounded-lg"
                         >
                             Today's goals <i class="fa-solid fa-bullseye"></i>
                         </h4>
-                        <div class="lists bg-white">
+                        <div class="lists bg-[#F6F1E9]">
                             <div class="flex">
                                 <div>
                                     <input type="text" />
@@ -132,11 +132,11 @@
                     </div>
                     <div class="card">
                         <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] w-50 text-center rounded-lg"
+                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
                         >
                             Quran Tracker <i class="fa fa-book"></i>
                         </h4>
-                        <div class="lists bg-white">
+                        <div class="lists bg-[#F6F1E9]">
                             <div class="flex list items-center">
                                 <label for="">Surah</label>
                                 <div>
@@ -160,11 +160,11 @@
                 >
                     <div class="card">
                         <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] w-50 text-center rounded-lg"
+                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
                         >
                             I'm grateful for <i class="fa fa-heart"></i>
                         </h4>
-                        <div class="lists bg-white">
+                        <div class="lists bg-[#F6F1E9]">
                             <div class="rounded">
                                 <input type="text" />
                             </div>
@@ -177,34 +177,37 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] w-50 text-center rounded-lg"
-                        >
+                        <h4 class="bg-[#B8860B] text-[#ffffff] text-center rounded-lg">
                             Hydratation Tracker
                             <i class="fa-solid fa-droplet"></i>
                         </h4>
-                        <div class="lists bg-white">
-                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
-                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
-                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
-                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
-                            <i class="fa-solid text-[#34ace0] fa-droplet"></i>
+                        <div class="lists bg-[#F6F1E9]">
+                            <div class="drops flex justify-between items-center p-4">
+                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
-                        <h4
-                            class="bg-[#1B1B2F] text-[#FFD700] text-center rounded-lg"
-                        >
+                        <h4 class="bg-[#B8860B] text-[#ffffff] text-center rounded-lg">
                             Today's Mood 😊
                         </h4>
-                        <div class="lists bg-white">
-                            <div>😢 🤭 😄 🤣 🤯</div>
+                        <div class="lists bg-[#F6F1E9]">
+                            <div class="emojis flex justify-between items-center p-4">
+                                <span class="emoji text-4xl hover:scale-125 transition-transform">😢</span>
+                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤭</span>
+                                <span class="emoji text-4xl hover:scale-125 transition-transform">😄</span>
+                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤣</span>
+                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤯</span>
+                            </div>
                         </div>
                     </div>
-                </div>
             </section>
             <!-- Dua du jour -->
-            <section class="bg-white dua text-center">
+            <section class="bg-[#F6F1E9] dua text-center">
                 <h4
                     class="font-semibold text-gray-800 text-lg flex items-center justify-center gap-2"
                 >
