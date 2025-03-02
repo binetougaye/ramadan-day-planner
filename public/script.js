@@ -87,3 +87,70 @@ document.getElementById("happy")?.addEventListener("click", () => setTextByMood(
 document.getElementById("overthink")?.addEventListener("click", () => setTextByMood("overthink"));
 
 
+const hydrationMessages = {
+    drop1: "Vous avez bu un verre d'eau. Continuez comme ça!",
+    drop2: "Deux verres d'eau, vous êtes sur la bonne voie!",
+    drop3: "Trois verres, votre corps vous remercie!",
+    drop4: "Quatre verres, vous êtes bien hydraté!",
+    drop5: "Cinq verres, excellent travail pour votre santé!"
+};
+
+function setHydrationText(dropId) {
+    const hydrationText = document.getElementById("hydrationText");
+    if (hydrationText && hydrationMessages[dropId]) {
+        hydrationText.innerText = hydrationMessages[dropId];
+    }
+}
+
+document.getElementById("drop1")?.addEventListener("click", () => setHydrationText("drop1"));
+document.getElementById("drop2")?.addEventListener("click", () => setHydrationText("drop2"));
+document.getElementById("drop3")?.addEventListener("click", () => setHydrationText("drop3"));
+document.getElementById("drop4")?.addEventListener("click", () => setHydrationText("drop4"));
+document.getElementById("drop5")?.addEventListener("click", () => setHydrationText("drop5"));
+
+function saveChecklist() {
+    const checkboxes = document.querySelectorAll("#ibadahList input[type='checkbox']");
+    const checklistState = {};
+
+    checkboxes.forEach((checkbox, index) => {
+        checklistState[`ibadah${index + 1}`] = checkbox.checked;
+    });
+
+    localStorage.setItem("ibadahChecklist", JSON.stringify({
+        state: checklistState,
+        timestamp: new Date().getTime() 
+    }));
+}
+
+
+function loadChecklist() {
+    const savedData = localStorage.getItem("ibadahChecklist");
+
+    if (savedData) {
+        const { state, timestamp } = JSON.parse(savedData);
+
+        const now = new Date().getTime();
+        const twentyFourHours = 24 * 60 * 60 * 1000; 
+
+        if (now - timestamp < twentyFourHours) {
+            
+            Object.keys(state).forEach((key) => {
+                const checkbox = document.getElementById(key);
+                if (checkbox) {
+                    checkbox.checked = state[key];
+                }
+            });
+        } else {
+            
+            localStorage.removeItem("ibadahChecklist");
+        }
+    }
+}
+
+
+document.querySelectorAll("#ibadahList input[type='checkbox']").forEach((checkbox) => {
+    checkbox.addEventListener("change", saveChecklist);
+});
+
+
+document.addEventListener("DOMContentLoaded", loadChecklist);
