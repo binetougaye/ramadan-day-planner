@@ -22,6 +22,7 @@ date.innerText = today
 
 
 // Obtenir la date islamique du jour
+
 const hijriDate = document.getElementById("hijri")
 const dateDuJour = document.getElementById("date_du_jour")
 async function getHijriDate() {
@@ -101,3 +102,4 @@ sadness.addEventListener("click", async () => {
         texte.innerText = ""
     }
 });
+
