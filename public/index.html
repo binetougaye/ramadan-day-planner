@@ -173,26 +173,36 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h4
-                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
-                        >
+                        <h4 class="bg-[#B8860B] text-[#ffffff] w-full text-center rounded-lg py-2">
                             Quran Tracker <i class="fa fa-book"></i>
                         </h4>
-                        <div class="lists bg-[#F6F1E9]">
-                            <div class="flex list items-center">
-                                <label for="">Surah</label>
-                                <div>
-                                    <input type="text" />
+                    
+                        <div class="lists bg-[#F6F1E9] p-3 rounded-lg mt-2">
+                            <p id="last-read" class="text-sm text-gray-600 mt-2">Dernière lecture : Aucune</p>
+                    
+                            <div class="flex items-center gap-4">
+                                <div class="flex-1">
+                                    <label for="surah-select" class="block text-sm font-medium text-gray-700">Surah</label>
+                                    <select id="surah-select" class="border p-2 text-sm rounded-lg w-full" onchange="updateVerseSelect()">
+                                        <option value="">Sélectionner une Sourate</option>
+                                    </select>
+                                </div>
+                    
+                                <div class="flex-1">
+                                    <label for="ayah-select" class="block text-sm font-medium text-gray-700">Verset</label>
+                                    <select id="ayah-select" class="border p-2 text-sm rounded-lg w-full">
+                                        <option value="">Sélectionner un verset</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="flex list">
-                                <label for="">Verset</label>
-                                <div>
-                                    <input type="text" />
-                                </div>
-                            </div>
+                    
+                            <button onclick="saveLastRead()" class="mt text-center bg-[#B8860B] text-white py-2 w-50 rounded-lg">
+                                📌 Enregistrer la lecture
+                            </button>
                         </div>
                     </div>
+                    
+                    
                 </div>
             </section>
             <!--  -->

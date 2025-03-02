@@ -218,6 +218,7 @@ h1 {
     }
 }
 
+
 #ibadahList {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
@@ -239,4 +240,8 @@ h1 {
 
 .text-sm {
     font-size: 0.875rem; /* Taille de texte réduite */
+
+.mt{
+    margin-top: 10px;
+
 }
