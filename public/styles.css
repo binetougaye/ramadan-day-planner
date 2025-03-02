@@ -31,7 +31,7 @@ input,
 .prayers {
     margin-top: 30px;
 }
-.prayers h4 {
+h4 {
     padding: 10px;
     position: relative;
     top: 10px;
@@ -50,6 +50,11 @@ h1 {
 .lists {
     padding-top: 30px;
     padding: 20px;
+
+    overflow: hidden;
+}
+#mood {
+    height: 200px;
 }
 .card:hover {
     transform: scale(1.02);
@@ -168,7 +173,7 @@ h1 {
     animation: pulse 3s infinite ease-in-out;
 }
 .dua {
-    margin-top: 20px;
+    margin-top: 80px;
     padding: 10px;
 }
 /* Media Query pour les écrans mobiles */

@@ -30,6 +30,8 @@ async function randomAyah() {
 async function getRandomVerse() {
     const verseResponse = await fetch(`${API_BASE_URL}/verses/random`);
     const verseData = await verseResponse.json();
+
+
     return verseData.verse;
 }
 
@@ -78,7 +80,7 @@ function showLoader() {
 }
 
 function removeFootNotes(text) {
-    return text.replace(/<sup.*?>.*?<\/sup>/g, ''); 
+    return text.replace(/<sup.*?>.*?<\/sup>/g, '');
 }
 
 randomAyah();
