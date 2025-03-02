@@ -79,19 +79,16 @@
                         <p id="hijri"></p>
                     </div>
                        <div class="card">
-                        <h4
-                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
+                        <div class="text-center bg-[#F6F1E9]">
+                         <label class="text-[#B8860B]" for="day"
+                            > 🕋 Prayer Times</label
                         >
-                           🕋 Prayer Times
-                        </h4>
-                        <div class="lists bg-[#F6F1E9]">
-                      
-                            <ul id="prayer_times">
-                                <li>🕌 Fajr: <span>05:12 AM</span></li>
-                                <li>☀️ Dhuhr: <span>12:30 PM</span></li>
-                                <li>🌇 Asr: <span>16:15 PM</span></li>
-                                <li>🌙 Maghrib: <span>19:05 PM</span></li>
-                                <li>🌌 Isha: <span>20:45 PM</span></li>
+                            <ul class="flex justify-center items-center" id="prayer_times">
+                                <li>🕌 Fajr: 05:12 AM</li>
+                                <li>☀️ Dhuhr: 12:30 PM</li>
+                                <li>🌇 Asr: 16:15 PM</li>
+                                <li>🌙 Maghrib: 19:05 PM</li>
+                                <li>🌌 Isha: 20:45 PM</li>
                             </ul>
                         </div>
                     </div>
@@ -109,11 +106,7 @@
                             Ibadah Checklist <i class="fa fa-moon"></i>
                         </h4>
                         <div class="lists bg-[#F6F1E9]">
-                            <div class="flex">
-                                <div>
                                     <input type="text" />
-                                </div>
-                            </div>
                             <div class="flex">
                                 <div>
                                     <input type="text" />
@@ -212,17 +205,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div id="mood" class="card">
                         <h4 class="bg-[#B8860B] text-[#ffffff] text-center rounded-lg">
                             Today's Mood 😊
                         </h4>
                         <div class="lists bg-[#F6F1E9]">
-                            <div class="emojis flex justify-between items-center p-4">
+                            <div class="emojis  flex justify-between items-center p-4">
                                 <span id="sad" class="emoji text-4xl hover:scale-125 transition-transform">😢</span>
-                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤭</span>
-                                <span class="emoji text-4xl hover:scale-125 transition-transform">😄</span>
-                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤣</span>
-                                <span class="emoji text-4xl hover:scale-125 transition-transform">🤯</span>
+                                <span id="surprise" class="emoji text-4xl hover:scale-125 transition-transform">🤭</span>
+                                <span id="happy" class="emoji text-4xl hover:scale-125 transition-transform">😄</span>
+                                <!-- <span class="emoji text-4xl hover:scale-125 transition-transform">🤣</span> -->
+                                <span id="overthink" class="emoji text-4xl hover:scale-125 transition-transform">😔 </span>
                             </div>
                             <div>
                             <p id="text"></p>
@@ -232,9 +225,9 @@
             </section>
             <!-- Dua du jour -->
             <section class="bg-[#F6F1E9] dua text-center">
-                <h4 class="font-semibold text-gray-800 text-lg flex items-center justify-center gap-2">
+                <h3 class="font-semibold text-gray-800 text-lg flex items-center justify-center gap-2">
                     <span class="text-yellow-500 text-xl">🕌</span> Dua / Verset du Jour
-                </h4>
+                </h3>
                 <p id="dua-verse" class="mt-2 mb-2 text-xl font-serif"></p>
                 <p id="dua-translation"></p>
                 <span id="sura-verse-info"></span>

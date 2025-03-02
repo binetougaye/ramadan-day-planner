@@ -55,51 +55,35 @@ async function getPrayerTimes() {
     try {
         const response = await fetch(api)
         const data = await response.json()
-        console.log(data.data.map((item) => item.timings));
-        const test = data.data.map((item) => item.timings)
-        test.filter((item, index) => item.length === 7)
-
-        // console.log(data.data.filter((item, index) => item.length <= 7));
-        // const teste = test.map((item, index) => item);
-        // console.log(teste);
-        // console.log(teste.filter((item, index) => item.length <= 7));
-
-
-
-
-
 
     } catch (error) {
         console.log(error);
-
-
     }
 }
 getPrayerTimes()
 // Recommandation en fonction de l'humeur
-const sadness = document.getElementById("sad")
 const texte = document.getElementById("text")
-const audio = document.getElementById("audio")
-// mettre un numéro qui varie en fonction de la sourate de 1 à 114
-const num = 93
-const apiSad = `https://api.alquran.cloud/v1/surah/${num}/en.asad`
-async function Test() {
-    try {
-        const response = await fetch(apiSad);
-        const data = await response.json();
-        return data.data.ayahs[3].text;
-    } catch (error) {
-        console.log(error);
-        return null;
+
+
+
+// const baseUrl = `https://api.alquran.cloud/v1/surah`
+
+const surah =
+{
+
+    sadness: "« À côté de la difficulté est, certes, une facilité ! Oui, à côté de la difficulté, il y a certes une facilité. »",
+    surprise: "« Nous leur montrerons Nos signes dans l'univers et en eux-mêmes, jusqu'à ce qu'il leur devienne évident que c'est cela, la vérité. »",
+    happy: "« Et lorsque votre Seigneur proclama : 'Si vous êtes reconnaissants, très certainement J'augmenterai (Mes bienfaits) pour vous. Mais si vous êtes ingrats, Mon châtiment sera terrible.' »",
+    overthink: "« Cette vie d’ici-bas n’est qu’amusement et jeu. La demeure de l’au-delà est assurément la vraie vie. S’ils savaient ! »"
+}
+function setTextByMood(mood) {
+    if (texte && surah[mood]) {
+        texte.innerText = surah[mood];
     }
 }
+document.getElementById("sad")?.addEventListener("click", () => setTextByMood("sadness"));
+document.getElementById("surprise")?.addEventListener("click", () => setTextByMood("surprise"));
+document.getElementById("happy")?.addEventListener("click", () => setTextByMood("happy"));
+document.getElementById("overthink")?.addEventListener("click", () => setTextByMood("overthink"));
 
-sadness.addEventListener("click", async () => {
-    const text = await Test();
-    if (text) {
-        texte.innerText = text
-    } else {
-        texte.innerText = ""
-    }
-});
 
