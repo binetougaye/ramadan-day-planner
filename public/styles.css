@@ -14,13 +14,15 @@ main {
     padding: 20px;
 }
 input,
-#date {
+#date,
+#date_du_jour {
     width: 350px;
     border-bottom: 2px dotted;
     color: black;
     outline: none;
     text-align: center;
 }
+
 /* days */
 .days {
     margin-top: 20px;
@@ -93,7 +95,7 @@ h1 {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #B8860B;
+    background-color: #b8860b;
     padding: 15px 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
