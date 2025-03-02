@@ -60,7 +60,7 @@
         </div>
         <main>
             <section class="days">
-                <div class="flex justify-center gap-10">
+                <div class="grid grid-cols-3 justify-center gap-10">
                     <div
                         class="flex flex-col justify-center items-center bg-[#F6F1E9] rounded"
                     >
@@ -78,6 +78,25 @@
                         <p id="date"></p>
                         <p id="hijri"></p>
                     </div>
+                       <div class="card">
+                        <h4
+                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
+                        >
+                           🕋 Prayer Times
+                        </h4>
+                        <div class="lists bg-[#F6F1E9]">
+                      
+                            <ul id="prayer_times">
+                                <li>🕌 Fajr: <span>05:12 AM</span></li>
+                                <li>☀️ Dhuhr: <span>12:30 PM</span></li>
+                                <li>🌇 Asr: <span>16:15 PM</span></li>
+                                <li>🌙 Maghrib: <span>19:05 PM</span></li>
+                                <li>🌌 Isha: <span>20:45 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+
                 </div>
             </section>
             <!--  -->
@@ -199,11 +218,14 @@
                         </h4>
                         <div class="lists bg-[#F6F1E9]">
                             <div class="emojis flex justify-between items-center p-4">
-                                <span class="emoji text-4xl hover:scale-125 transition-transform">😢</span>
+                                <span id="sad" class="emoji text-4xl hover:scale-125 transition-transform">😢</span>
                                 <span class="emoji text-4xl hover:scale-125 transition-transform">🤭</span>
                                 <span class="emoji text-4xl hover:scale-125 transition-transform">😄</span>
                                 <span class="emoji text-4xl hover:scale-125 transition-transform">🤣</span>
                                 <span class="emoji text-4xl hover:scale-125 transition-transform">🤯</span>
+                            </div>
+                            <div>
+                            <p id="text"></p>
                             </div>
                         </div>
                     </div>
