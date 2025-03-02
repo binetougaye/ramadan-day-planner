@@ -100,22 +100,50 @@
             <section class="prayers">
                 <div class="grid grid-cols-3 gap-5">
                     <div class="card">
-                        <h4
-                            class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg"
-                        >
+                        <h4 class="bg-[#B8860B] text-[#ffffff] w-50 text-center rounded-lg p-2">
                             Ibadah Checklist <i class="fa fa-moon"></i>
                         </h4>
-                        <div class="lists bg-[#F6F1E9]">
-                                    <input type="text" />
-                            <div class="flex">
-                                <div>
-                                    <input type="text" />
-                                </div>
+                        <div class="lists bg-[#F6F1E9] p-4 grid grid-cols-2 gap-4" id="ibadahList">
+                            <!-- Liste prédéfinie d'Ibadah -->
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah1" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah1" class="text-sm">Prière du Fajr</label>
                             </div>
-                            <div class="flex">
-                                <div>
-                                    <input type="text" />
-                                </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah2" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah2" class="text-sm">Lecture du Coran</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah3" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah3" class="text-sm">Dhikr du matin</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah4" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah4" class="text-sm">Prières surérogatoires</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah5" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah5" class="text-sm">Aumône (Sadaqah)</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah6" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah6" class="text-sm">Éviter les péchés</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah7" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah7" class="text-sm">Prière de Dhuhr</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah8" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah8" class="text-sm">Prière de Asr</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah9" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah9" class="text-sm">Prière de Maghrib</label>
+                            </div>
+                            <div class="flex items-center space-x-2 border-b border-dotted border-[#B8860B] pb-2">
+                                <input type="checkbox" id="ibadah10" class="form-checkbox h-4 w-4 text-[#B8860B] rounded-full">
+                                <label for="ibadah10" class="text-sm">Prière de Isha</label>
                             </div>
                         </div>
                     </div>
@@ -197,11 +225,14 @@
                         </h4>
                         <div class="lists bg-[#F6F1E9]">
                             <div class="drops flex justify-between items-center p-4">
-                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
-                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
-                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
-                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
-                                <i class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i id="drop1" class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i id="drop2" class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i id="drop3" class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i id="drop4" class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                                <i id="drop5" class="fa-solid text-[#34ace0] fa-droplet text-4xl hover:scale-125 transition-transform"></i>
+                            </div>
+                            <div>
+                                <p id="hydrationText"></p>
                             </div>
                         </div>
                     </div>
