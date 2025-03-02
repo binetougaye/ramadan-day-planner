@@ -84,3 +84,67 @@ function removeFootNotes(text) {
 }
 
 randomAyah();
+
+
+async function loadSurahs() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/chapters?language=fr`);
+        const data = await response.json();
+        const surahSelect = document.getElementById("surah-select");
+
+        data.chapters.forEach(surah => {
+            let option = document.createElement("option");
+            option.value = surah.id;
+            option.textContent = `${surah.id}. ${surah.name_simple} (${surah.name_arabic})`;
+            surahSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error("Erreur lors du chargement des sourates :", error);
+    }
+}
+
+async function updateVerseSelect() {
+    const surahId = document.getElementById("surah-select").value;
+    const ayahSelect = document.getElementById("ayah-select");
+    
+    ayahSelect.innerHTML = '<option value="">Sélectionner un verset</option>';
+
+    if (!surahId) return;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/chapters/${surahId}`);
+        const data = await response.json();
+        const verseCount = data.chapter.verses_count;
+
+        for (let i = 1; i <= verseCount; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = `Verset ${i}`;
+            ayahSelect.appendChild(option);
+        }
+    } catch (error) {
+        console.error("Erreur lors du chargement des versets :", error);
+    }
+}
+
+//Fonction pour enregistrer la dernière lecture
+function saveLastRead() {
+    const surahSelect = document.getElementById("surah-select");
+    const ayahSelect = document.getElementById("ayah-select");
+
+    const surahText = surahSelect.options[surahSelect.selectedIndex].text;
+    const ayahText = ayahSelect.options[ayahSelect.selectedIndex].text;
+
+    if (surahSelect.value && ayahSelect.value) {
+        const lastRead = `📖 ${surahText} - ${ayahText}`;
+        localStorage.setItem("lastRead", lastRead);
+        document.getElementById("last-read").innerText = `Dernière lecture : ${lastRead}`;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("last-read").innerText =
+        localStorage.getItem("lastRead") || "Dernière lecture : Aucune";
+    
+    loadSurahs();
+});
