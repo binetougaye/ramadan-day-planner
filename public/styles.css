@@ -245,3 +245,20 @@ h1 {
     margin-top: 10px;
 
 }
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fasted { background-color: #4CAF50; color: white; }  /* Vert pour les jours jeûnés */
+.to-catch-up { background-color: #FF9800; color: white; } /* Orange pour jours à rattraper */

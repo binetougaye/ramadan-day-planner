@@ -154,3 +154,42 @@ document.querySelectorAll("#ibadahList input[type='checkbox']").forEach((checkbo
 
 
 document.addEventListener("DOMContentLoaded", loadChecklist);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const calendar = document.getElementById("calendar");
+    const daysInMonth = 30;
+
+    let fastingData = JSON.parse(localStorage.getItem("fastingData")) || {};
+
+    for (let i = 1; i <= daysInMonth; i++) {
+        let dayDiv = document.createElement("div");
+        dayDiv.classList.add("day");
+        dayDiv.textContent = i;
+
+        if (fastingData[i] === "fasted") {
+            dayDiv.classList.add("fasted");
+        } else if (fastingData[i] === "to-catch-up") {
+            dayDiv.classList.add("to-catch-up");
+        }
+
+        dayDiv.addEventListener("click", function () {
+            if (dayDiv.classList.contains("fasted")) {
+                dayDiv.classList.remove("fasted");
+                dayDiv.classList.add("to-catch-up");
+                fastingData[i] = "to-catch-up";
+            } else if (dayDiv.classList.contains("to-catch-up")) {
+                dayDiv.classList.remove("to-catch-up");
+                delete fastingData[i]; 
+            } else {
+                dayDiv.classList.add("fasted");
+                fastingData[i] = "fasted";
+            }
+
+            // Sauvegarder dans le localStorage
+            localStorage.setItem("fastingData", JSON.stringify(fastingData));
+        });
+
+        calendar.appendChild(dayDiv);
+    }
+});
