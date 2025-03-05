@@ -245,3 +245,50 @@ h1 {
         top: 80px;
     }
 }
+
+
+
+#ibadahList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 1rem; /* Espace entre les éléments */
+}
+
+.flex.items-center.space-x-2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espace entre la checkbox et le texte */
+}
+
+.form-checkbox {
+    height: 1rem; /* Taille réduite */
+    width: 1rem; /* Taille réduite */
+    border-radius: 9999px; /* Rond */
+    border: 1px solid #B8860B; /* Couleur de la bordure */
+}
+
+.text-sm {
+    font-size: 0.875rem; /* Taille de texte réduite */
+
+.mt{
+    margin-top: 10px;
+
+}
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fasted { background-color: #4CAF50; color: white; }  /* Vert pour les jours jeûnés */
+.to-catch-up { background-color: #FF9800; color: white; } /* Orange pour jours à rattraper */
+
