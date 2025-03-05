@@ -83,13 +83,14 @@
                          <label class="text-[#B8860B]" for="day"
                             > 🕋 Prayer Times</label
                         >
-                            <ul class="flex justify-center items-center" id="prayer_times">
-                                <li>🕌 Fajr: 05:12 AM</li>
-                                <li>☀️ Dhuhr: 12:30 PM</li>
-                                <li>🌇 Asr: 16:15 PM</li>
-                                <li>🌙 Maghrib: 19:05 PM</li>
-                                <li>🌌 Isha: 20:45 PM</li>
+                            <ul  id="prayer_times">
+                                <li>🕌 Fajr: <span id="fajr"></span></li>
+                                <li>☀️ Dhuhr: <span id="dhuhr"></span></li>
+                                <li>🌇 Asr: <span id="asr"></span></li>
+                                <li>🌙 Maghrib: <span id="maghrib"></span></li>
+                                <li>🌌 Isha: <span id="isha"></span></li>
                             </ul>
+                            <div>🌓 Coucher du soleil: <span id="sunset"></span></div>
                         </div>
                     </div>
                    
@@ -170,7 +171,9 @@
                                     <input type="text" />
                                 </div>
                             </div>
+                    <button  class="mt save text-center bg-[#B8860B] text-white py-2 w-50 rounded-lg" onclick="saveGoalsToLocalStorage()">📌 Save Goals</button>
                         </div>
+    
                     </div>
                     <div class="card">
                         <h4 class="bg-[#B8860B] text-[#ffffff] w-full text-center rounded-lg py-2">
@@ -196,8 +199,8 @@
                                 </div>
                             </div>
                     
-                            <button onclick="saveLastRead()" class="mt text-center bg-[#B8860B] text-white py-2 w-50 rounded-lg">
-                                📌 Enregistrer la lecture
+                            <button  onclick="saveLastRead()" class="mt save text-center bg-[#B8860B] text-white py-2 w-50 rounded-lg">
+                                📌 Save My Reading
                             </button>
                         </div>
                     </div>
