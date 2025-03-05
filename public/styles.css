@@ -66,7 +66,9 @@ h1 {
     padding: 8px;
     margin-top: 8px;
 }
-
+.save {
+    padding: 8px;
+}
 #changeMode {
     position: fixed;
     bottom: 20px;
@@ -176,6 +178,32 @@ h1 {
     margin-top: 80px;
     padding: 10px;
 }
+#ibadahList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 1rem; /* Espace entre les éléments */
+}
+
+.flex.items-center.space-x-2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espace entre la checkbox et le texte */
+}
+
+.form-checkbox {
+    height: 1rem; /* Taille réduite */
+    width: 1rem; /* Taille réduite */
+    border-radius: 9999px; /* Rond */
+    border: 1px solid #b8860b; /* Couleur de la bordure */
+}
+
+.text-sm {
+    font-size: 0.875rem; /* Taille de texte réduite */
+}
+.mt {
+    margin-top: 10px;
+}
+
 /* Media Query pour les écrans mobiles */
 @media only screen and (max-width: 768px) {
     .ramadan-box {
@@ -216,32 +244,4 @@ h1 {
     .icon2 {
         top: 80px;
     }
-}
-
-
-#ibadahList {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
-    gap: 1rem; /* Espace entre les éléments */
-}
-
-.flex.items-center.space-x-2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Espace entre la checkbox et le texte */
-}
-
-.form-checkbox {
-    height: 1rem; /* Taille réduite */
-    width: 1rem; /* Taille réduite */
-    border-radius: 9999px; /* Rond */
-    border: 1px solid #B8860B; /* Couleur de la bordure */
-}
-
-.text-sm {
-    font-size: 0.875rem; /* Taille de texte réduite */
-
-.mt{
-    margin-top: 10px;
-
 }
